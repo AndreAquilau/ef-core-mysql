@@ -1,0 +1,11 @@
+﻿START TRANSACTION;
+
+ALTER TABLE `user` RENAME COLUMN `id` TO `Id`;
+
+ALTER TABLE `user` MODIFY COLUMN `Id` int NOT NULL AUTO_INCREMENT;
+
+INSERT INTO `__EFMigrationsHistory` (`MigrationId`, `ProductVersion`)
+VALUES ('20221102024126_V1.0.1_DDL_USER_KEY', '6.0.10');
+
+COMMIT;
+
